@@ -1,0 +1,24 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>jQuery magnet test</title>
+        <script src=http://code.jquery.com/jquery-1.7.1.min.js></script>
+        <script src=jquery-magnet.js></script>
+        <script>$(function(){
+            $('#start_btn').click(function(){
+                $('#float').magnet('#pivot');
+            });
+            $('#stop_btn').click(function(){
+                $('#float').magnet();
+            });
+        })</script>
+    </head>
+    <body>
+        <button id=start_btn style=position:fixed;bottom:10px;left:10px>start</button>
+        <button id=stop_btn style=position:fixed;bottom:10px;left:70px>stop</button>
+        <div style=height:10000px>
+            <div id=pivot style=width:10px;height:10px;position:fixed;background-color:blue;left:50px;top:30px></div>
+            <div id=float style=width:10px;height:10px;position:absolute;background-color:red;left:160px;top:140px></div>
+        </div>
+    </body>
+</html>
